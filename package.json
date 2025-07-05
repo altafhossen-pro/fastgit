@@ -1,0 +1,27 @@
+{
+    "name": "fastgit",
+    "version": "1.0.0",
+    "description": "Fast and simple git operations CLI tool",
+    "main": "bin/fastgit.js",
+    "type": "module",
+    "bin": {
+        "fastgit": "./bin/fastgit.js"
+    },
+    "scripts": {
+        "test": "node tests/test.js"
+    },
+    "keywords": [
+        "git",
+        "cli",
+        "fast",
+        "developer",
+        "tools"
+    ],
+    "author": "ALTAF",
+    "license": "MIT",
+    "dependencies": {
+        "chalk": "^5.4.1",
+        "child_process": "^1.0.2",
+        "commander": "^9.0.0"
+    }
+}

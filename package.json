@@ -1,11 +1,11 @@
 {
-    "name": "fastgit",
+    "name": "gittu",
     "version": "1.0.0",
     "description": "Fast and simple git operations CLI tool",
-    "main": "bin/fastgit.js",
+    "main": "bin/gittu.js",
     "type": "module",
     "bin": {
-        "fastgit": "./bin/fastgit.js"
+        "gittu": "./bin/gittu.js"
     },
     "scripts": {
         "test": "node tests/test.js"

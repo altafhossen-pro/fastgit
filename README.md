@@ -1,33 +1,33 @@
-# FastGit CLI Tool
+# gittu CLI Tool
 
 🚀 Make git operations faster and easier with simplified commands.
 
 ## Installation
 
 ```bash
-npm install -g fastgit
+npm install -g gittu
 ```
 
 ## Usage
 
 ### Basic Commands
 ```bash
-fastgit add .              # Add all files
-fastgit commit "message"   # Commit with message  
-fastgit push               # Push to remote
-fastgit status             # Show status
+gittu add .              # Add all files
+gittu commit "message"   # Commit with message  
+gittu push               # Push to remote
+gittu status             # Show status
 ```
 
 ### Quick Commands
 ```bash
-fastgit quick "message"    # Add + commit + push in one command
+gittu quick "message"    # Add + commit + push in one command
 ```
 
 ### Examples
 ```bash
-fastgit quick "fix: login bug"
-fastgit commit "feat: add new feature"
-fastgit add src/
+gittu quick "fix: login bug"
+gittu commit "feat: add new feature"
+gittu add src/
 ```
 
 ## Development
@@ -35,11 +35,11 @@ fastgit add src/
 ```bash
 # Clone and install
 git clone your-repo
-cd fastgit
+cd gittu
 npm install
 
 # Test locally
-node bin/fastgit.js help
+node bin/gittu.js help
 ```
 
 ## License

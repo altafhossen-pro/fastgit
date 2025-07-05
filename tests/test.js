@@ -1,11 +1,11 @@
 const { execSync } = require('child_process');
 
-console.log('🧪 Testing FastGit CLI...');
+console.log('🧪 Testing gittu CLI...');
 
 try {
     // Test help command
     console.log('\n📋 Testing help command...');
-    execSync('node bin/fastgit.js help', { stdio: 'inherit' });
+    execSync('node bin/gittu.js help', { stdio: 'inherit' });
     console.log('✓ Help command works');
 
     console.log('\n🎉 Basic tests passed!');

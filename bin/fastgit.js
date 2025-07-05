@@ -8,7 +8,7 @@ import fs from 'fs';
 // Version and description
 program
   .version('1.0.0')
-  .description('FastGit - Make git operations faster and easier');
+  .description('gittu - Make git operations faster and easier');
 
 // Helper function to check if git repo exists
 function isGitRepository() {
@@ -216,8 +216,8 @@ temp/
       }
 
       console.log(chalk.blue('🎉 Git repository ready! Now you can use:'));
-      console.log(chalk.yellow('  fastgit origin add <url>'));
-      console.log(chalk.yellow('  fastgit quick "initial commit"'));
+      console.log(chalk.yellow('  gittu origin add <url>'));
+      console.log(chalk.yellow('  gittu quick "initial commit"'));
 
     } catch (error) {
       console.log(chalk.red('✗ Error initializing repository'));
@@ -233,7 +233,7 @@ program
     try {
       if (!isGitRepository()) {
         console.log(chalk.red('✗ Not a git repository'));
-        console.log(chalk.yellow('💡 Run "fastgit init" to initialize a git repository'));
+        console.log(chalk.yellow('💡 Run "gittu init" to initialize a git repository'));
         return;
       }
 
@@ -254,7 +254,7 @@ program
     try {
       if (!isGitRepository()) {
         console.log(chalk.red('✗ Not a git repository'));
-        console.log(chalk.yellow('💡 Run "fastgit init" to initialize a git repository'));
+        console.log(chalk.yellow('💡 Run "gittu init" to initialize a git repository'));
         return;
       }
 
@@ -276,7 +276,7 @@ program
     try {
       if (!isGitRepository()) {
         console.log(chalk.red('✗ Not a git repository'));
-        console.log(chalk.yellow('💡 Run "fastgit init" to initialize a git repository'));
+        console.log(chalk.yellow('💡 Run "gittu init" to initialize a git repository'));
         return;
       }
 
@@ -291,7 +291,7 @@ program
           console.log(chalk.green('✓ Added remote origin'));
         }
       } else {
-        console.log(chalk.red('✗ Invalid action. Use: fastgit origin add <url>'));
+        console.log(chalk.red('✗ Invalid action. Use: gittu origin add <url>'));
       }
     } catch (error) {
       console.log(chalk.red('✗ Error setting remote origin'));
@@ -307,13 +307,13 @@ program
     try {
       if (!isGitRepository()) {
         console.log(chalk.red('✗ Not a git repository'));
-        console.log(chalk.yellow('💡 Run "fastgit init" to initialize a git repository'));
+        console.log(chalk.yellow('💡 Run "gittu init" to initialize a git repository'));
         return;
       }
 
       if (!hasRemoteOrigin()) {
         console.log(chalk.red('✗ No remote origin configured'));
-        console.log(chalk.yellow('💡 Run "fastgit origin add <url>" to add remote origin'));
+        console.log(chalk.yellow('💡 Run "gittu origin add <url>" to add remote origin'));
         return;
       }
 
@@ -347,7 +347,7 @@ program
     try {
       if (!isGitRepository()) {
         console.log(chalk.red('✗ Not a git repository'));
-        console.log(chalk.yellow('💡 Run "fastgit init" to initialize a git repository'));
+        console.log(chalk.yellow('💡 Run "gittu init" to initialize a git repository'));
         return;
       }
 
@@ -383,7 +383,7 @@ program
     try {
       if (!isGitRepository()) {
         console.log(chalk.red('✗ Not a git repository'));
-        console.log(chalk.yellow('💡 Run "fastgit init" to initialize a git repository'));
+        console.log(chalk.yellow('💡 Run "gittu init" to initialize a git repository'));
         return;
       }
 
@@ -419,7 +419,7 @@ program
         }
       } else {
         console.log(chalk.yellow('⚠️  No remote origin configured, skipping push'));
-        console.log(chalk.yellow('💡 Run "fastgit origin add <url>" to add remote origin'));
+        console.log(chalk.yellow('💡 Run "gittu origin add <url>" to add remote origin'));
       }
 
       console.log(chalk.blue('🎉 Quick operation completed!'));
@@ -434,28 +434,28 @@ program
   .command('help')
   .description('Show help and examples')
   .action(() => {
-    console.log(chalk.blue('\n🚀 FastGit - Quick Git Operations\n'));
+    console.log(chalk.blue('\n🚀 gittu - Quick Git Operations\n'));
     console.log(chalk.yellow('Setup Commands:'));
-    console.log('  fastgit init                    # Initialize git repository');
-    console.log('  fastgit origin add <url>        # Add remote origin URL');
+    console.log('  gittu init                    # Initialize git repository');
+    console.log('  gittu origin add <url>        # Add remote origin URL');
     console.log('\n' + chalk.yellow('Basic Commands:'));
-    console.log('  fastgit add .                   # Add all files');
-    console.log('  fastgit add file1 file2         # Add specific files');
-    console.log('  fastgit commit "message"        # Commit with message');
-    console.log('  fastgit push                    # Push to remote');
-    console.log('  fastgit status                  # Show status');
+    console.log('  gittu add .                   # Add all files');
+    console.log('  gittu add file1 file2         # Add specific files');
+    console.log('  gittu commit "message"        # Commit with message');
+    console.log('  gittu push                    # Push to remote');
+    console.log('  gittu status                  # Show status');
     console.log('\n' + chalk.yellow('Quick Commands:'));
-    console.log('  fastgit quick                   # Add + commit + push (auto message)');
-    console.log('  fastgit quick "message"         # Add + commit + push (custom message)');
+    console.log('  gittu quick                   # Add + commit + push (auto message)');
+    console.log('  gittu quick "message"         # Add + commit + push (custom message)');
     console.log('\n' + chalk.yellow('Examples:'));
-    console.log('  fastgit init');
-    console.log('  fastgit origin add "https://github.com/username/repo.git"');
-    console.log('  fastgit quick                   # Uses auto-generated message');
-    console.log('  fastgit quick "fix: login bug"');
-    console.log('  fastgit commit "feat: add new feature"');
-    console.log('  fastgit add src/components/');
-    console.log('  fastgit status');
-    console.log('\n' + chalk.gray('💡 Tip: Use "fastgit quick" without message for auto-generated commit messages'));
+    console.log('  gittu init');
+    console.log('  gittu origin add "https://github.com/username/repo.git"');
+    console.log('  gittu quick                   # Uses auto-generated message');
+    console.log('  gittu quick "fix: login bug"');
+    console.log('  gittu commit "feat: add new feature"');
+    console.log('  gittu add src/components/');
+    console.log('  gittu status');
+    console.log('\n' + chalk.gray('💡 Tip: Use "gittu quick" without message for auto-generated commit messages'));
   });
 
 // Parse command line arguments

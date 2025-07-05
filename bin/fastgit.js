@@ -377,7 +377,7 @@ program
 
 // QUICK command - add + commit + push
 program
-  .command('quick <message>')
+  .command('quick [message]')
   .description('Add, commit and push in one command')
   .action((message) => {
     try {
@@ -389,13 +389,16 @@ program
 
       console.log(chalk.blue('🚀 Quick git operation starting...'));
 
+      // Set default message if not provided
+      const commitMessage = message || `Quick update - ${new Date().toISOString().split('T')[0]}`;
+
       // Add all files
       execSync('git add .', { stdio: 'pipe' });
       console.log(chalk.green('✓ Added all files'));
 
       // Commit with message
-      execSync(`git commit -m "${message}"`, { stdio: 'pipe' });
-      console.log(chalk.green(`✓ Committed: ${message}`));
+      execSync(`git commit -m "${commitMessage}"`, { stdio: 'pipe' });
+      console.log(chalk.green(`✓ Committed: ${commitMessage}`));
 
       // Push to current branch (handle both first time and regular push)
       if (hasRemoteOrigin()) {
@@ -442,15 +445,17 @@ program
     console.log('  fastgit push                    # Push to remote');
     console.log('  fastgit status                  # Show status');
     console.log('\n' + chalk.yellow('Quick Commands:'));
-    console.log('  fastgit quick "message"         # Add + commit + push');
+    console.log('  fastgit quick                   # Add + commit + push (auto message)');
+    console.log('  fastgit quick "message"         # Add + commit + push (custom message)');
     console.log('\n' + chalk.yellow('Examples:'));
     console.log('  fastgit init');
     console.log('  fastgit origin add "https://github.com/username/repo.git"');
+    console.log('  fastgit quick                   # Uses auto-generated message');
     console.log('  fastgit quick "fix: login bug"');
     console.log('  fastgit commit "feat: add new feature"');
     console.log('  fastgit add src/components/');
     console.log('  fastgit status');
-    console.log('\n' + chalk.gray('💡 Tip: Use "fastgit quick" for fast add+commit+push operations'));
+    console.log('\n' + chalk.gray('💡 Tip: Use "fastgit quick" without message for auto-generated commit messages'));
   });
 
 // Parse command line arguments

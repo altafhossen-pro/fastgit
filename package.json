@@ -1,6 +1,6 @@
 {
     "name": "gittu",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Fast and simple git operations CLI tool",
     "main": "bin/gittu.js",
     "type": "module",
@@ -22,7 +22,6 @@
     "dependencies": {
         "chalk": "^5.4.1",
         "child_process": "^1.0.2",
-        "commander": "^9.0.0",
-        "gittu": "^1.0.1"
+        "commander": "^9.0.0"
     }
 }

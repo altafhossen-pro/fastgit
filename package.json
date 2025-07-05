@@ -1,6 +1,6 @@
 {
     "name": "gittu",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Fast and simple git operations CLI tool",
     "main": "bin/gittu.js",
     "type": "module",

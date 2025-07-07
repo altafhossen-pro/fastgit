@@ -429,6 +429,39 @@ program
     }
   });
 
+
+  // SAVE command - add + commit only (no push)
+program
+.command('save [message]')
+.description('Stage and commit changes without pushing')
+.action((message) => {
+  try {
+    if (!isGitRepository()) {
+      console.log(chalk.red('✗ Not a git repository'));
+      console.log(chalk.yellow('💡 Run "gittu init" to initialize a git repository'));
+      return;
+    }
+
+    console.log(chalk.blue('💾 Saving changes (add + commit)...'));
+
+    // Set default message if not provided
+    const commitMessage = message || `Save update - ${new Date().toISOString().split('T')[0]}`;
+
+    // Add all files
+    execSync('git add .', { stdio: 'pipe' });
+    console.log(chalk.green('✓ Added all files'));
+
+    // Commit with message
+    execSync(`git commit -m "${commitMessage}"`, { stdio: 'pipe' });
+    console.log(chalk.green(`✓ Committed: ${commitMessage}`));
+
+    console.log(chalk.blue('✅ Save operation completed (no push)'));
+  } catch (error) {
+    console.log(chalk.red('✗ Error in save operation'));
+    console.log(chalk.red(error.message));
+  }
+});
+
 // Help command
 program
   .command('help')

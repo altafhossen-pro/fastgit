@@ -58,6 +58,7 @@ gittu quick "Initial commit"
 ### Power Commands
 | Command | Description |
 |---------|-------------|
+| `gittu save [message]` | Add + commit (no push) in one command |
 | `gittu quick [message]` | Add + commit + push in one command |
 | `gittu help` | Show detailed help and examples |
 

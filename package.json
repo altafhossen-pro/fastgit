@@ -1,113 +1,118 @@
 {
-    "name": "gittu",
-    "version": "1.0.4",
-    "description": "Fast and simple git operations CLI tool for developers. Streamline your git workflow with powerful commands and intuitive interface.",
-    "main": "bin/gittu.js",
-    "type": "module",
-    "bin": {
-        "gittu": "./bin/gittu.js"
+  "name": "gittu",
+  "version": "1.0.4",
+  "description": "Fast and simple git operations CLI tool for developers. Streamline your git workflow with powerful commands and intuitive interface.",
+  "main": "bin/gittu.js",
+  "type": "module",
+  "bin": {
+    "gittu": "./bin/gittu.js"
+  },
+  "scripts": {
+    "test": "node tests/test.js"
+  },
+  "keywords": [
+    "git",
+    "cli",
+    "fast",
+    "developer",
+    "tools",
+    "git-workflow",
+    "command-line",
+    "productivity",
+    "version-control",
+    "git-helper",
+    "automation",
+    "terminal",
+    "bash",
+    "shell",
+    "git-commands"
+  ],
+  "author": {
+    "name": "ALTAF",
+    "email": "altafhossen.pro@gmail.com",
+    "url": "https://github.com/altafhossen-pro"
+  },
+  "contributors": [
+    {
+      "name": "ALTAF",
+      "email": "altafhossen.pro@gmail.com",
+      "url": "https://github.com/altafhossen-pro"
     },
-    "scripts": {
-        "test": "node tests/test.js"
-    },
-    "keywords": [
-        "git",
-        "cli",
-        "fast",
-        "developer",
-        "tools",
-        "git-workflow",
-        "command-line",
-        "productivity",
-        "version-control",
-        "git-helper",
-        "automation",
-        "terminal",
-        "bash",
-        "shell",
-        "git-commands"
-    ],
-    "author": {
-        "name": "ALTAF",
-        "email": "altafhossen.pro@gmail.com",
-        "url": "https://github.com/altafhossen-pro"
-    },
-    "contributors": [
-        {
-            "name": "ALTAF",
-            "email": "altafhossen.pro@gmail.com",
-            "url": "https://github.com/altafhossen-pro"
-        }
-    ],
-    "license": "MIT",
-    "homepage": "https://github.com/altafhossen-pro/gittu#readme",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/altafhossen-pro/gittu.git"
-    },
-    "bugs": {
-        "url": "https://github.com/altafhossen-pro/gittu/issues",
-        "email": "altafhossen-pro@gmail.com"
-    },
-    "funding": {
-        "type": "github",
-        "url": "https://github.com/sponsors/altafhossen-pro"
-    },
-    "engines": {
-        "node": ">=14.0.0",
-        "npm": ">=6.0.0"
-    },
-    "preferGlobal": true,
-    "dependencies": {
-        "chalk": "^5.4.1",
-        "child_process": "^1.0.2",
-        "commander": "^9.0.0"
-    },
-    "devDependencies": {},
-    "peerDependencies": {
-        "git": ">=2.0.0"
-    },
-    "bundledDependencies": [],
-    "optionalDependencies": {},
-    "files": [
-        "bin/",
-        "lib/",
-        "README.md",
-        "LICENSE",
-        "CHANGELOG.md"
-    ],
-    "directories": {
-        "bin": "./bin",
-        "lib": "./lib",
-        "test": "./tests",
-        "doc": "./docs"
-    },
-    "config": {
-        "gittu": {
-            "defaultBranch": "master",
-            "autoUpdate": true,
-            "colorOutput": true
-        }
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged",
-            "pre-push": "npm run test"
-        }
-    },
-    "lint-staged": {
-        "*.js": [
-            "eslint --fix",
-            "prettier --write",
-            "git add"
-        ]
-    },
-    "publishConfig": {
-        "access": "public",
-        "registry": "https://registry.npmjs.org/"
-    },
-    "private": false,
-    "workspaces": [
-        "packages/*"
+    {
+      "name": "AMIN",
+      "email": "mdalaminmollah000@gmail.com",
+      "url": "https://github.com/maamspy"
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/altafhossen-pro/gittu#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/altafhossen-pro/gittu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/altafhossen-pro/gittu/issues",
+    "email": "altafhossen-pro@gmail.com"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/altafhossen-pro"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "preferGlobal": true,
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "child_process": "^1.0.2",
+    "commander": "^9.0.0"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "git": ">=2.0.0"
+  },
+  "bundledDependencies": [],
+  "optionalDependencies": {},
+  "files": [
+    "bin/",
+    "lib/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "directories": {
+    "bin": "./bin",
+    "lib": "./lib",
+    "test": "./tests",
+    "doc": "./docs"
+  },
+  "config": {
+    "gittu": {
+      "defaultBranch": "master",
+      "autoUpdate": true,
+      "colorOutput": true
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run test"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
     ]
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "private": false,
+  "workspaces": [
+    "packages/*"
+  ]
 }

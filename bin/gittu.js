@@ -429,6 +429,38 @@ program
     }
   });
 
+// QUICK COMMIT command - add all files and commit with required message
+program
+  .command("commit <message>")
+  .description("Add all files and commit with message (required)")
+  .action((message) => {
+    try {
+      if (!isGitRepository()) {
+        console.log(chalk.red("✗ Not a git repository"));
+        console.log(
+          chalk.yellow('💡 Run "gittu init" to initialize a git repository')
+        );
+        return;
+      }
+
+      if (!message || message.trim() === "") {
+        console.log(chalk.red("✗ No commit message provided. Please provide a commit message."));
+        console.log(chalk.yellow('💡 Usage: gittu commit "your commit message"'));
+        return;
+      }
+
+      // Add all files
+      execSync("git add .", { stdio: "inherit" });
+      console.log(chalk.green("✓ Added all files to staging area"));
+
+      execSync(`git commit -m "${message}"`, { stdio: "inherit" });
+      console.log(chalk.green(`✓ Committed: ${message}`));
+    } catch (error) {
+      console.log(chalk.red("✗ Error in commit operation"));
+      console.log(chalk.red(error.message));
+    }
+  });
+
 // Help command
 program
   .command('help')

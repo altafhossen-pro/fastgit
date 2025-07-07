@@ -1,6 +1,6 @@
 {
     "name": "gittu",
-    "version": "1.0.4",
+    "version": "1.0.6",
     "description": "Fast and simple git operations CLI tool for developers. Streamline your git workflow with powerful commands and intuitive interface.",
     "main": "bin/gittu.js",
     "type": "module",
@@ -64,9 +64,6 @@
         "commander": "^9.0.0"
     },
     "devDependencies": {},
-    "peerDependencies": {
-        "git": ">=2.0.0"
-    },
     "bundledDependencies": [],
     "optionalDependencies": {},
     "files": [

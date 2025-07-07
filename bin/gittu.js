@@ -7,7 +7,7 @@ import fs from 'fs';
 
 // Version and description
 program
-  .version('1.0.5')
+  .version('1.0.6')
   .description('gittu - Make git operations faster and easier');
 
 // Helper function to check if git repo exists

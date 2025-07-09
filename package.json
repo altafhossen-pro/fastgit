@@ -1,6 +1,6 @@
 {
     "name": "gittu",
-    "version": "1.0.6",
+    "version": "1.0.8",
     "description": "Fast and simple git operations CLI tool for developers. Streamline your git workflow with powerful commands and intuitive interface.",
     "main": "bin/gittu.js",
     "type": "module",
@@ -37,6 +37,10 @@
             "name": "ALTAF",
             "email": "altafhossen.pro@gmail.com",
             "url": "https://github.com/altafhossen-pro"
+        },{
+            "name": "AMIN",
+            "email": "mdalaminmollah000@gmail.com",
+            "url": "https://github.com/maamspy"
         }
     ],
     "license": "MIT",
